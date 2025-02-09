@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header img.logo {
+    height: 75px; /* Logo size adjustment */
+    width: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em; /* Adjust title size */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em; /* Navigation text size */
+}
+
+nav a:hover {
+    background-color: red;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: red;
+}
+
+/* Page Specific Styles */
+.Musicbody {
+    background-image: url('ggps0s3c.png');
+    background-size: cover;
+    background-position: center;
+    padding: 350px 20px;
+    color: white;
+    text-align: center;
+}
+
+.Musicbody h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.Musicbody .btn {
+    background-color: red;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.Musicbody .btn:hover {
+    background-color: darkred;
+}
+
+.upcoming-shows {
+    padding: 20px;
+    background-color: #000; /* Black background */
+    text-align: center;
+}
+
+.song-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.song-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.quote-container {
+    max-width: 600px;
+    text-align: left;
+    margin-left: 20px;
+    color: white; /* Make quotes visible */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000; /* Black background */
+    color: white;
+    text-align: center;
+    padding: 3px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+} 
+.about-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+.about-text p {
+    font-size: 25px; /* Adjust size as needed */
+}
+/* Jazz Page Styles */
+.jazz-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.jazz-image {
+    width: 100%;
+    height: 50%;
+    display: block;
+}
+
+.jazz-text {
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.jazz-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.jazz-text p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.jazz-text audio {
+    width: 100%;
+    max-width: 300px;
+}
+/* General Page Background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Dark Black Background */
+    color: white;
+}
+
+.jazz-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.jazz-image {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; /* Adds space between the image and the text */
+}
+
+.jazz-text {
+    width: 50%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+
+.jazz-text audio {
+    width: 100%;
+    max-width: 300px;
+}
+
+.music-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.music-image {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.play-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.play-button:hover {
+    background-color: darkred;
+}
+
+.music-description {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+}
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Onemusic4u Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Music.html">Music</a>
+            <div class="dropdown">
+                <a href="#">Browse</a>
+                <div class="dropdown-content">
+                    <a href="jazz.html">Jazz</a>
+                    <a href="rock.html">Rock</a>
+                    <a href="pop.html">Pop</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="music-section">
+    <img src="Music.png" alt="Music Image" class="music-image">
+    <button id="playButton" class="play-button">Play Music</button>
+    <p class="music-description">This website is still under development. Enjoy a song while we work on improving your experience!</p>
+    <audio id="audioPlayer" src="Music.mp3"></audio>
+</div>
+
+</div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>2025 Onemusic4u</p>
+    </footer>
+
+	<script>
+    document.getElementById('playButton').addEventListener('click', function() {
+        var audio = document.getElementById('audioPlayer');
+        if (audio.paused) {
+            audio.play();
+            this.textContent = 'Pause Music';
+        } else {
+            audio.pause();
+            this.textContent = 'Play Music';
+        }
+    });
+</script>
+
+</body>
+</html>

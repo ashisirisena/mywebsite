@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onemusic4u</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Onemusic4u Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Music.html">Music</a>
+            <div class="dropdown">
+                <a href="#">Browse</a>
+                <div class="dropdown-content">
+                    <a href="jazz.html">Jazz</a>
+                    <a href="rock.html">Rock</a>
+                    <a href="pop.html">Pop</a>
+                </div>
+            </div>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <div class="Musicbody" style="background-image: url('ggps0s3c.png');">
+        <h2>TURN YOUR FEELINGS INTO MUSIC</h2>
+        <a href="#quotes" class="btn" id="songBtn">Play song of the day</a>
+    </div>
+
+    <div class="upcoming-shows" id="quotes">
+        <h3>Song Quotes of the Day</h3>
+        <div class="song-container">
+            <img id="songImage" src="" alt="Song Image" class="song-image">
+            <div class="quote-container">
+                <p id="quoteText"><q>Loading music quotes...</q></p>
+                <p id="quoteAuthor"><b></b></p>
+                <audio id="audioPlayer" controls autoplay>
+                    <source id="audioSource" src="" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>2025 Onemusic4u</p>
+    </footer>
+
+    <script>
+        
+        const songs = [
+            {
+                image: 'song1.png',
+                quote: 'Music is the soundtrack of your life.',
+                author: 'Clark Madison',
+                audio: 'song1.mp3'
+            },
+            {
+                image: 'song2.jpg',
+                quote: 'Where words fail, music speaks.',
+                author: 'Hans Christian Andersen',
+                audio: 'song2.mp3'
+            },
+            {
+                image: 'song3.jpg',
+                quote: 'Music is life itself.',
+                author: 'Louis Armstrong',
+                audio: 'song3.mp3'
+            },
+            {
+                image: 'song4.jpg',
+                quote: 'Without music, life would be a mistake.',
+                author: 'Friedrich Nietzsche',
+                audio: 'song4.mp3'
+            },
+            {
+                image: 'song5.jpg',
+                quote: 'Music can change the world because it can change people.',
+                author: 'Bono',
+                audio: 'song5.mp3'
+            }
+        ];
+
+        
+        function changeSong() {
+            const randomIndex = Math.floor(Math.random() * songs.length);
+            const song = songs[randomIndex];
+
+            document.getElementById('songImage').src = song.image;
+            document.getElementById('quoteText').innerHTML = `<q>${song.quote}</q>`;
+            document.getElementById('quoteAuthor').innerHTML = `<b>${song.author}</b>`;
+            document.getElementById('audioSource').src = song.audio;
+            document.getElementById('audioPlayer').load();
+        }
+
+        
+        document.getElementById('songBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            changeSong();
+            document.getElementById('quotes').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        
+        changeSong();
+    </script>
+</body>
+</html>
